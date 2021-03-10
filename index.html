@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Case</title>
+</head>
+<body>
+
+    <form action="" style="width: 50%; margin: 0 auto;">
+        <input type="radio" id="ceo" name="designations" value="ceo">
+        <label for="male">CEO</label>
+        <input type="radio" id="manager" name="designations"  value="managers">
+        <label for="female">Manager</label>
+        <input type="radio" id="lead" name="designations"  value="leads">
+        <label for="other">Lead</label>
+        <input type="radio" id="developer" name="designations"  value="developers">
+        <label for="other">Developer</label> <br>
+        <input style="margin-top: 16px" onclick="checkDesignation()" type="button" id="btn" value="submit">
+    </form>
+
+    <script>
+        function checkDesignation() {
+            var checkRadioBtn = document.querySelector('input[name="designations"]:checked');
+
+            if(checkRadioBtn){
+                
+                switch(checkRadioBtn.value){
+
+                    case "ceo":
+                        alert("You have Selected CEO");
+                        break;
+                    
+                    case "managers":
+                        alert("You have selected Manager");
+                        break;
+                    
+                    case "leads":
+                        alert("You have selected Lead");
+                        break;
+                        
+                    case "developers":
+                        alert("You have selected Developer");
+                        break;
+                }
+            }
+            else {
+                alert("You have not Checked anyone. Please check and submit again");
+            }
+        }
+    </script>
+    
+</body>
+</html>
