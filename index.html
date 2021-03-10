@@ -16,7 +16,9 @@
         <input type="radio" id="lead" name="designations"  value="leads">
         <label for="other">Lead</label>
         <input type="radio" id="developer" name="designations"  value="developers">
-        <label for="other">Developer</label> <br>
+        <label for="other">Developer</label>
+        <input type="radio" id="developer" name="designations"  value="interns">
+        <label for="other">Intern</label> <br>
         <input style="margin-top: 16px" onclick="checkDesignation()" type="button" id="btn" value="submit">
     </form>
 
@@ -42,6 +44,10 @@
                         
                     case "developers":
                         alert("You have selected Developer");
+                        break;
+
+                    case "interns":
+                        alert("You have selected Intern");
                         break;
                 }
             }
